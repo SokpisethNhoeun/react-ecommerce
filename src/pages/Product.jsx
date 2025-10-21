@@ -6,7 +6,7 @@ import ProductDisplay from '../components/Productdisplay/ProductDisplay';
 import Description from '../Description/Description';
 import RelatedProduct from '../components/RelatedProduct/RelatedProduct';
 function Product() {
-  const {all_product} = useContext(ShopContext);
+  const {all_product,CardItem} = useContext(ShopContext);
   const {productid} = useParams();
   
 const product = all_product.find(p => p.id === Number(productid)); 
@@ -16,7 +16,8 @@ const product = all_product.find(p => p.id === Number(productid));
       <ProductDisplay product={product} />
       <Description />
       <RelatedProduct />
-      
+      {CardItem}
+    
       
     </div>
   )

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
 function Navbar(props) {
   const [menu, setMenu] = useState("shop");
-  const { login, handlelogin } = useContext(ShopContext);
+
 
   return (
     <div className="navbar">

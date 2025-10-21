@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./ProductDisplay.css";
 import star_icon from "../assets/star_icon.png";
 import star_dull_icon from "../assets/star_dull_icon.png";
+import { ShopContext } from "../../context/ShopContext";
 function ProductDisplay(props) {
   const { product } = props;
   const Sizes = ["S", "M", "L", "XL", "XXL"];
   const [size, setsize] = useState(null);
-  return (
+  const {addtocart,removefromcard} = useContext(ShopContext)
+  return ( 
     <div className="product-container">
       <div className="product-container-left">
         <div className="display-product-left">
@@ -52,7 +54,7 @@ function ProductDisplay(props) {
           <button>XL</button>
           <button>XXL</button> */}
         </div>
-        <button className="add-to-cart"> Add to cart</button>
+        <button className="add-to-cart" onClick={() => {addtocart(product.id)}}> Add to cart</button>
         <div className="product-info">
           <h3>
             {" "}
