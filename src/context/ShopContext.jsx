@@ -15,6 +15,7 @@ const ShopContextProvider = (props) => {
 
 };
 
+
   const [login, setlogin] = useState(false);
   const handleLogin = () => {
     setlogin(!login);
@@ -27,7 +28,7 @@ const ShopContextProvider = (props) => {
     
    
   };
-  const removefromcard = (itemid) => {
+  const removefromcart = (itemid) => {
     setCardItem((prev) => ({ ...prev, [itemid]: prev[itemid] - 1 }));
    
     
@@ -39,7 +40,7 @@ const ShopContextProvider = (props) => {
     handleLogin,
     CartItem,
     addtocart,
-    removefromcard,
+    removefromcart,
   };
 
   return (

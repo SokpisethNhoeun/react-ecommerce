@@ -1,3 +1,4 @@
+/* ---------- product layout (your original styles) ---------- */
 .product-container {
   width: 100%;
   padding: 0px 170px;
@@ -6,14 +7,11 @@
 }
 .product-container .product-container-left {
   width: 50%;
-
   display: flex;
-
   justify-content: space-between;
 }
 .product-container .product-container-left .display-product-left {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,14 +43,13 @@
   width: 50%;
 }
 .product-container .product-container-right h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
 .product-container-right .review {
   display: flex;
   padding: 20px;
   column-gap: 5px;
   align-items: center;
-
 }
 .product-price {
   display: flex;
@@ -60,13 +57,12 @@
   margin-left: 20px;
 }
 .product-price .new-price {
- font-size: 1.5rem;
+  font-size: 1.5rem;
   font-style: bold;
   font-weight: 500;
   color: red;
 }
-.product-price .old-price
-{
+.product-price .old-price {
   opacity: 0.8;
   color: rgb(183, 182, 182);
   text-decoration: line-through;
@@ -78,34 +74,31 @@
 .select-size {
   font-size: 2rem;
   font-weight: 500;
-    opacity: 0.8;
+  opacity: 0.8;
   color: rgb(43, 36, 36);
 }
 .size-selection {
   display: flex;
- column-gap: 10px;
- padding: 20px;
-  
+  column-gap: 10px;
+  padding: 20px;
 }
-.size-selection button.active{
-background-color: red;
-color: white;
+.size-selection button.active {
+  background-color: red;
+  color: white;
 }
-
-
-.size-selection button{
-color: black;
+.size-selection button {
+  color: black;
   padding: 10px 30px;
-   outline: none;
-  border:none;
+  outline: none;
+  border: none;
   font-size: 1rem;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 .size-selection button:hover {
-background-color: red;
-color: white;
+  background-color: red;
+  color: white;
 }
-.size-selection button:active{
+.size-selection button:active {
   background-color: black;
 }
 .add-to-cart {
@@ -123,7 +116,6 @@ color: white;
   background-color: white;
   color: red;
   border: 1px solid red;
- 
 }
 .product-info {
   padding: 20px;
@@ -133,4 +125,103 @@ color: white;
 }
 .product-info h3 span {
   font-weight: 300;
+}
+
+/* ---------- toast (.cart-alert) ---------- */
+/* use transition + visible class for reliable toggling */
+.cart-alert {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+  z-index: 99999;
+
+  /* start hidden */
+  opacity: 0;
+  transform: translateX(60px) scale(0.95);
+
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-alert::before {
+  content: "🛒";
+  font-size: 1.3rem;
+}
+
+.cart-alert.visible {
+  margin-top: 100px;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* small screens */
+@media (max-width: 600px) {
+  .product-container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .cart-alert {
+    right: 12px;
+    left: 12px;
+    top: 12px;
+  }
+}
+/* ---------- toast container ---------- */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column-reverse; /* new toasts appear below and push older ones up */
+  gap: 10px;
+  z-index: 99999;
+}
+
+/* ---------- single toast ---------- */
+.cart-alert {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  animation: toastIn 0.3s forwards, toastOut 0.3s forwards 1.7s;
+  margin-top: 90px;
+}
+
+.cart-alert::before {
+  content: "🛒";
+  font-size: 1.3rem;
+}
+
+/* ---------- animations ---------- */
+@keyframes toastIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastOut {
+  to {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
 }
