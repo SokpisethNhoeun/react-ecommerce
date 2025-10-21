@@ -1,0 +1,38 @@
+.popular-container{
+    width: 100%;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 80vh;
+ 
+}
+.popular-container1{
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  
+}
+.popular-container1 hr {
+    height: 3px;
+    background: red;
+    border-radius: 50%;
+}
+.autoshow {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 20% 100vh;
+}
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

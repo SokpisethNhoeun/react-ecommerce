@@ -1,0 +1,28 @@
+
+.container-description{
+ display: flex;
+    width: 100%;
+    padding: 30px 170px;
+    flex-direction: column;
+}
+.description-header {
+   display: flex;
+    
+}
+.description-header h1 {
+    padding: 10px 40px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+.description-content {
+
+    border: 1px solid black;
+   padding: 20px;
+
+}
+.description-header h1 span {
+    color: goldenrod;
+}

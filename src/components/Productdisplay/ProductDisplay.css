@@ -1,0 +1,136 @@
+.product-container {
+  width: 100%;
+  padding: 0px 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-container .product-container-left {
+  width: 50%;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+.product-container .product-container-left .display-product-left {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-container
+  .product-container-left
+  .display-product-left
+  .product-small {
+  width: 30%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+.product-container .product-container-left .product-small img {
+  width: 81.3%;
+  cursor: pointer;
+}
+
+.product-container .product-container-left .product-big {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.product-container .product-container-left .product-big img {
+  width: 100%;
+  margin-left: -20px;
+}
+.product-container .product-container-right {
+  width: 50%;
+}
+.product-container .product-container-right h1 {
+    font-weight: 400;
+}
+.product-container-right .review {
+  display: flex;
+  padding: 20px;
+  column-gap: 5px;
+  align-items: center;
+
+}
+.product-price {
+  display: flex;
+  column-gap: 20px;
+  margin-left: 20px;
+}
+.product-price .new-price {
+ font-size: 1.5rem;
+  font-style: bold;
+  font-weight: 500;
+  color: red;
+}
+.product-price .old-price
+{
+  opacity: 0.8;
+  color: rgb(183, 182, 182);
+  text-decoration: line-through;
+}
+.product-description {
+  font-weight: 300;
+  padding: 30px 20px;
+}
+.select-size {
+  font-size: 2rem;
+  font-weight: 500;
+    opacity: 0.8;
+  color: rgb(43, 36, 36);
+}
+.size-selection {
+  display: flex;
+ column-gap: 10px;
+ padding: 20px;
+  
+}
+.size-selection button.active{
+background-color: red;
+color: white;
+}
+
+
+.size-selection button{
+color: black;
+  padding: 10px 30px;
+   outline: none;
+  border:none;
+  font-size: 1rem;
+  transition: .2s linear;
+}
+.size-selection button:hover {
+background-color: red;
+color: white;
+}
+.size-selection button:active{
+  background-color: black;
+}
+.add-to-cart {
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  background-color: red;
+  padding: 12px 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+  transition: 0.2s linear;
+  border: 1px solid red;
+}
+.add-to-cart:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+ 
+}
+.product-info {
+  padding: 20px;
+  row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.product-info h3 span {
+  font-weight: 300;
+}

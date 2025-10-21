@@ -1,0 +1,12 @@
+.new-collection-container{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-collection-container .new-collection{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+width: 80%;
+}

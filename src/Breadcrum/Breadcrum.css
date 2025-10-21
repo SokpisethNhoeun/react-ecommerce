@@ -1,0 +1,8 @@
+.breadcrum-container {
+   padding: 60px 170px;
+}
+.breadcrum {
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+}

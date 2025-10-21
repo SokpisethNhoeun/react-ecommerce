@@ -1,0 +1,61 @@
+.loginsignup-form-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginsignup-form {
+  border: solid 1px black;
+  padding: 40px;
+}
+.loginsignup-form h1 {
+  font-weight: 500;
+}
+.loginsignup-form .input-login {
+  display: flex;
+  flex-direction: column;
+}
+.loginsignup-form input {
+  padding: 16px 30px;
+  margin: 10px 0px;
+  outline: none;
+  font-size: 1.2rem;
+}
+.loginsignup-form .input-login button {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 8px;
+  margin-top: 1rem;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  color: white;
+  outline: none;
+  transition: 0.2s linear;
+}
+.loginsignup-form .input-login button:hover {
+  background-color: black;
+}
+.loginsignup-form p {
+  margin-top: 1rem;
+}
+.loginsignup-form p span {
+  color: red;
+  cursor: pointer;
+}
+.loginsignup-form .verify {
+  margin-top: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  color: rgb(92, 61, 61);
+}
+.loginsignup-form .verify p {
+  margin-top: -2px;
+}
+.loginsignup-form .verify input {
+  cursor: pointer;
+}

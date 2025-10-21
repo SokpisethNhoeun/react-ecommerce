@@ -1,0 +1,34 @@
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.footer-container .footer-logo {
+    display: flex;
+    align-items: center;
+    
+}
+.footer-container .footer-logo p {
+    font-size: 2rem;
+    font-weight: 400;
+    transform:rotateZ(-5deg)
+}
+.footer-container ul {
+    display: flex;
+}
+.footer-container ul li {
+    padding: 0px 40px;
+    font-size: 1.2rem;
+}
+.social-links svg {
+  font-size: 32px; /* resize icons */
+  margin: 0 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links svg:hover {
+  transform: scale(1.2);
+  color: #000000;
+}
