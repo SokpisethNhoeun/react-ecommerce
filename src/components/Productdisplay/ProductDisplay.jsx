@@ -19,7 +19,7 @@ function ProductDisplay({ product }) {
     if (addtocart) addtocart(id);
 
     const toastId = Date.now(); // unique ID
-    setToasts((prev) => [...prev, { id: toastId, message: "✅ Added to cart!" }]);
+    setToasts((prev) => [...prev, { id: toastId, message: "This Product Added to cart!" }]);
 
     // remove toast after 2s
     setTimeout(() => {
