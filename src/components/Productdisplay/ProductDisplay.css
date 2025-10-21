@@ -117,6 +117,9 @@
   color: red;
   border: 1px solid red;
 }
+.add-to-cart:active{
+  background: rgb(255, 0, 0);
+}
 .product-info {
   padding: 20px;
   row-gap: 15px;
@@ -127,56 +130,6 @@
   font-weight: 300;
 }
 
-/* ---------- toast (.cart-alert) ---------- */
-/* use transition + visible class for reliable toggling */
-.cart-alert {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  background: linear-gradient(135deg, #ff4b2b, #ff416c);
-  color: #fff;
-  padding: 14px 24px;
-  border-radius: 12px;
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.3px;
-  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
-  z-index: 99999;
-
-  /* start hidden */
-  opacity: 0;
-  transform: translateX(60px) scale(0.95);
-
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cart-alert::before {
-  content: "🛒";
-  font-size: 1.3rem;
-}
-
-.cart-alert.visible {
-  margin-top: 100px;
-  opacity: 1;
-  transform: translateX(0) scale(1);
-}
-
-/* small screens */
-@media (max-width: 600px) {
-  .product-container {
-    padding: 0 20px;
-    flex-direction: column;
-  }
-
-  .cart-alert {
-    right: 12px;
-    left: 12px;
-    top: 12px;
-  }
-}
 /* ---------- toast container ---------- */
 .toast-container {
   position: fixed;
@@ -190,7 +143,7 @@
 
 /* ---------- single toast ---------- */
 .cart-alert {
-  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  background: linear-gradient(135deg, #00ff6a, hsl(119, 100%, 50%));
   color: #fff;
   padding: 14px 24px;
   border-radius: 12px;
@@ -198,7 +151,7 @@
   font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
   opacity: 0;
   transform: translateY(20px) scale(0.95);

@@ -15,8 +15,8 @@ function LoginSignUp() {
       {login === false?   <div className="loginsignup-form">
         <h1>Login</h1>
         <div className="input-login">
-        <input type="email" name="" id="" placeholder="Email address" />
-        <input type="password" name="" id="" placeholder="Password" />
+        <input type="email" name="" id="" placeholder="Email address" required />
+        <input type="password" name="" id="" placeholder="Password" required />
         <button >Continue</button>
         </div>
         <p>
@@ -30,8 +30,8 @@ function LoginSignUp() {
         <h1>Sign up</h1>
         <div className="input-login">
           <input type="text" placeholder="Enter name" />
-        <input type="email" name="" id="" placeholder="Email address" />
-        <input type="password" name="" id="" placeholder="Password" />
+        <input type="email" name="" id="" placeholder="Email address" required />
+        <input type="password" name="" id="" placeholder="Password" required />
         <button >Sign up account</button>
         </div>
         <p>

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
 function Navbar(props) {
   const [menu, setMenu] = useState("shop");
+  const {totalcart} = useContext(ShopContext)
 
 
   return (
@@ -46,7 +47,7 @@ function Navbar(props) {
         <Link to="/cart">
           <img src={cart_icon} alt="cart-icon" />
         </Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{totalcart()}</div>
       </div>
       {/* {props.children} */}
     </div>
