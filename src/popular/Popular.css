@@ -36,3 +36,88 @@
         transform: translateY(0px);
     }
 }
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+    .popular-container, .popular-container1 {
+        padding: 60px 40px;
+    }
+    
+    .popular-container {
+        height: auto;
+        min-height: 70vh;
+    }
+}
+
+/* Mobile and small tablets - SHOW 1 GRID ITEM */
+@media screen and (max-width: 768px) {
+    .popular-container, .popular-container1 {
+        padding: 40px 20px;
+    }
+    
+    .popular-container {
+        height: auto;
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1fr; /* Only 1 column */
+        gap: 30px;
+        justify-items: center;
+    }
+    
+    .popular-container1 h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .popular-container {
+        padding: 30px 15px;
+        gap: 25px;
+    }
+    
+    .popular-container1 {
+        padding-top: 50px;
+    }
+    
+    .popular-container1 h1 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .popular-container {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    .popular-container1 {
+        padding-top: 40px;
+    }
+    
+    .popular-container1 h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* For very large screens */
+@media screen and (min-width: 1600px) {
+    .popular-container {
+        padding: 100px 200px;
+    }
+    
+    .popular-container1 {
+        padding-top: 100px;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media screen and (max-width: 768px) {
+    .autoshow {
+        animation-range: entry 10% 100vh;
+    }
+}

@@ -1,3 +1,5 @@
+/* NewCollection.css - Responsive with 1 product per row on small screens */
+
 .new-collection-container{
     margin-top: 50px;
     width: 100%;
@@ -6,7 +8,119 @@
     justify-content: center;
 }
 .new-collection-container .new-collection{
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    gap: 20px;
+}
+
+/* Product image zoom effect */
+.new-collection .item img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.new-collection .item:hover img {
+    transform: scale(1.05);
+}
+
+/* Large tablets and small laptops */
+@media screen and (max-width: 1200px) {
+    .new-collection-container .new-collection{
+        width: 85%;
+        gap: 18px;
+    }
+}
+
+/* Tablets and large phones */
+@media screen and (max-width: 992px) {
+    .new-collection-container .new-collection{
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        gap: 16px;
+    }
+    
+    .new-collection .item:hover img {
+        transform: scale(1.03);
+    }
+}
+
+/* Medium phones */
+@media screen and (max-width: 768px) {
+    .new-collection-container{
+        margin-top: 40px;
+    }
+    
+    .new-collection-container .new-collection{
+        grid-template-columns: repeat(2, 1fr);
+        width: 92%;
+        gap: 14px;
+    }
+    
+    .new-collection .item:hover img {
+        transform: none;
+    }
+}
+
+/* Small phones - 1 product per row */
+@media screen and (max-width: 576px) {
+    .new-collection-container{
+        margin-top: 30px;
+        width: 100%;
+       
+    }
+    
+    .new-collection-container .new-collection{
+        grid-template-columns: 1fr; /* 1 product per row */
+        width: 95%;
+        gap: 15px;
+       
+    }
+    
+    /* Center single product */
+    .new-collection .item {
+        display: flex;
+        justify-content: center;
+         align-items: center;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    
+    .new-collection .item img {
+        max-width: 80%; /* Make image smaller on single column */
+    }
+    
+    .new-collection .item:active img {
+        transform: scale(1.02);
+    }
+}
+
+/* Extra small phones - 1 product per row */
+@media screen and (max-width: 400px) {
+    .new-collection-container{
+        margin-top: 25px;
+    }
+    
+    .new-collection-container .new-collection{
+        grid-template-columns: 1fr; /* 1 product per row */
+        width: 95%;
+        gap: 12px;
+    }
+    
+    .new-collection .item img {
+        max-width: 80%; /* Slightly larger on very small screens */
+    }
+}
+
+/* For touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .new-collection .item:hover img {
+        transform: none;
+    }
+    
+    .new-collection .item:active img {
+        transform: scale(1.02);
+        transition: transform 0.1s ease;
+    }
 }

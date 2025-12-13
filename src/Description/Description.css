@@ -1,14 +1,16 @@
+/* Description.css - Responsive additions */
 
-.container-description{
- display: flex;
+.container-description {
+    display: flex;
     width: 100%;
     padding: 30px 170px;
     flex-direction: column;
 }
+
 .description-header {
-   display: flex;
-    
+    display: flex;
 }
+
 .description-header h1 {
     padding: 10px 40px;
     font-size: 1.6rem;
@@ -17,12 +19,95 @@
     border-right: 1px solid black;
     border-top: 1px solid black;
 }
+
 .description-content {
-
     border: 1px solid black;
-   padding: 20px;
-
+    padding: 20px;
 }
+
 .description-header h1 span {
     color: goldenrod;
+}
+
+/* Responsive additions - keeping your original style intact */
+@media screen and (max-width: 1200px) {
+    .container-description {
+        padding: 30px 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container-description {
+        padding: 30px 50px;
+    }
+    
+    .description-header h1 {
+        padding: 10px 30px;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-description {
+        padding: 25px 30px;
+    }
+    
+    .description-header {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .description-header h1 {
+        padding: 10px 20px;
+        font-size: 1.4rem;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .description-content {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-description {
+        padding: 20px;
+    }
+    
+    .description-header h1 {
+        padding: 8px 15px;
+        font-size: 1.2rem;
+    }
+    
+    .description-content {
+        padding: 12px;
+    }
+    
+    .description-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container-description {
+        padding: 15px 10px;
+    }
+    
+    .description-header {
+        flex-direction: row;
+    }
+    
+    .description-header h1 {
+        padding: 8px 10px;
+        font-size: 1.1rem;
+    }
+    
+    .description-content {
+        padding: 10px;
+    }
+    
+    .description-content p {
+        font-size: 13px;
+    }
 }

@@ -1,8 +1,71 @@
+/* Breadcrum.css - Responsive additions */
+
 .breadcrum-container {
-   padding: 60px 170px;
+   padding: 20px 170px;
 }
+
 .breadcrum {
     align-items: center;
     display: flex;
     column-gap: 10px;
+}
+
+/* Responsive additions - keeping your original style intact */
+@media screen and (max-width: 1200px) {
+    .breadcrum-container {
+        padding: 20px 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .breadcrum-container {
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .breadcrum-container {
+        padding: 20px 30px;
+    }
+    
+    .breadcrum {
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .breadcrum-container {
+        padding: 15px 20px;
+    }
+    
+    .breadcrum {
+        font-size: 14px;
+        column-gap: 6px;
+        row-gap: 6px;
+    }
+    
+    .breadcrum img {
+        width: 10px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .breadcrum-container {
+        padding: 15px 10px;
+    }
+    
+    .breadcrum {
+        font-size: 13px;
+    }
+    
+    .breadcrum span {
+        /* Handle long product names on small screens */
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }

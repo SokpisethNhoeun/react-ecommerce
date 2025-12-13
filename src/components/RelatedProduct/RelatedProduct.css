@@ -1,12 +1,96 @@
+/* RelatedProduct.css - Responsive additions */
+
 .ralatedproducts {
     width: 100%;
-    padding:30px  170px;
+    padding: 30px 170px;
 }
-.ralatedproducts h1{
-font-weight: 300;
+
+.ralatedproducts h1 {
+    font-weight: 300;
 }
+
 .relatedproducts-item {
     display: flex;
     margin-top: 40px;
     border-bottom: 1px solid black;
+}
+
+/* Responsive additions - keeping your original style intact */
+@media screen and (max-width: 1200px) {
+    .ralatedproducts {
+        padding: 30px 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ralatedproducts {
+        padding: 30px 50px;
+    }
+    
+    .relatedproducts-item {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ralatedproducts {
+        padding: 25px 30px;
+    }
+    
+    .ralatedproducts h1 {
+        font-size: 1.5rem;
+    }
+    
+    .relatedproducts-item {
+        margin-top: 25px;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ralatedproducts {
+        padding: 20px;
+    }
+    
+    .ralatedproducts h1 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .relatedproducts-item {
+        margin-top: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        border-bottom: none;
+    }
+    
+    /* Assuming Item component has a wrapper */
+    .relatedproducts-item > * {
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ralatedproducts {
+        padding: 15px 10px;
+    }
+    
+    .ralatedproducts h1 {
+        font-size: 1.2rem;
+    }
+    
+    .relatedproducts-item {
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .relatedproducts-item > * {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }

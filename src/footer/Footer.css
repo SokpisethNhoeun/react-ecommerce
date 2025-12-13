@@ -32,3 +32,189 @@
   transform: scale(1.2);
   color: #000000;
 }
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+    .footer-container {
+        padding: 15px;
+    }
+    
+    .footer-container .footer-logo p {
+        font-size: 1.8rem;
+    }
+    
+    .footer-container ul li {
+        padding: 0px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .social-links svg {
+        font-size: 28px;
+        margin: 0 8px;
+    }
+}
+
+/* Mobile and small tablets */
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .footer-container {
+        padding: 15px 10px;
+    }
+    
+    .footer-container .footer-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-container .footer-logo p {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+    
+    .footer-container ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .footer-container ul li {
+        padding: 0px 15px;
+        font-size: 1rem;
+    }
+    
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-links svg {
+        font-size: 26px;
+        margin: 0 5px;
+    }
+    
+    .footer-container:nth-child(3) p {
+        text-align: center;
+        padding: 0 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .footer-container {
+        padding: 12px 5px;
+    }
+    
+    .footer-container .footer-logo img {
+        width: 80px;
+        height: auto;
+    }
+    
+    .footer-container .footer-logo p {
+        font-size: 1.4rem;
+    }
+    
+    .footer-container ul {
+        gap: 10px;
+    }
+    
+    .footer-container ul li {
+        padding: 0px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .social-links svg {
+        font-size: 22px;
+        margin: 0 4px;
+    }
+    
+    .footer-container:nth-child(3) p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .footer-container {
+        padding: 10px 5px;
+    }
+    
+    .footer-container .footer-logo p {
+        font-size: 1.2rem;
+    }
+    
+    .footer-container ul li {
+        padding: 0px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-links svg {
+        font-size: 20px;
+        margin: 0 3px;
+    }
+    
+    .footer-container:nth-child(3) p {
+        font-size: 0.75rem;
+    }
+}
+
+/* For very large screens */
+@media screen and (min-width: 1600px) {
+    .footer-container {
+        padding: 30px;
+    }
+    
+    .footer-container .footer-logo p {
+        font-size: 2.5rem;
+    }
+    
+    .footer-container ul li {
+        padding: 0px 50px;
+        font-size: 1.4rem;
+    }
+    
+    .social-links svg {
+        font-size: 38px;
+        margin: 0 15px;
+    }
+}
+
+/* Stack footer containers on mobile */
+@media screen and (max-width: 768px) {
+    body > :nth-child(1),
+    body > :nth-child(2),
+    body > :nth-child(3),
+    body > :nth-child(4) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Make sure footer stays at bottom */
+@media screen and (max-width: 768px) {
+    html, body {
+        height: 100%;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        flex: 1;
+    }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import new_collection from "../components/assets/new_collections";
-import "./Popular.css";
 import "./NewCollection.css";
 import Item from "../items/Item";
 function NewCollection() {
