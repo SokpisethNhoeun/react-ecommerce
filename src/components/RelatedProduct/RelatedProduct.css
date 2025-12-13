@@ -1,96 +1,176 @@
-/* RelatedProduct.css - Responsive additions */
-
-.ralatedproducts {
-    width: 100%;
-    padding: 30px 170px;
+/* =====================
+   DESKTOP (DEFAULT)
+===================== */
+.relatedproducts {
+  width: 100%;
+  padding: 40px 120px;
+  box-sizing: border-box;
 }
 
-.ralatedproducts h1 {
-    font-weight: 300;
+.relatedproducts h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
 }
 
-.relatedproducts-item {
-    display: flex;
-    margin-top: 40px;
-    border-bottom: 1px solid black;
+.relatedproducts hr {
+  width: 180px;
+  height: 2px;
+  border: none;
+  background: #333;
+  margin: 0 auto 40px;
 }
 
-/* Responsive additions - keeping your original style intact */
-@media screen and (max-width: 1200px) {
-    .ralatedproducts {
-        padding: 30px 100px;
-    }
+.relatedproducts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-@media screen and (max-width: 992px) {
-    .ralatedproducts {
-        padding: 30px 50px;
-    }
-    
-    .relatedproducts-item {
-        margin-top: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+/* ITEM */
+.relatedproducts-grid .item {
+    width: 82%;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
-@media screen and (max-width: 768px) {
-    .ralatedproducts {
-        padding: 25px 30px;
-    }
-    
-    .ralatedproducts h1 {
-        font-size: 1.5rem;
-    }
-    
-    .relatedproducts-item {
-        margin-top: 25px;
-        gap: 15px;
-    }
+.relatedproducts-grid .item img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-@media screen and (max-width: 576px) {
-    .ralatedproducts {
-        padding: 20px;
-    }
-    
-    .ralatedproducts h1 {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-    
-    .relatedproducts-item {
-        margin-top: 20px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
-        border-bottom: none;
-    }
-    
-    /* Assuming Item component has a wrapper */
-    .relatedproducts-item > * {
-        flex: 1 1 calc(50% - 12px);
-        max-width: calc(50% - 12px);
-    }
+.relatedproducts-grid .item h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
 }
 
-@media screen and (max-width: 400px) {
-    .ralatedproducts {
-        padding: 15px 10px;
-    }
+.prices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* =====================
+   LARGE LAPTOP
+===================== */
+@media (max-width: 1200px) {
+  .relatedproducts {
+    padding: 30px 70px;
+  }
+
+  .relatedproducts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .relatedproducts-grid .item img {
+    height: 77%;
+  }
+}
+
+/* =====================
+   TABLET
+===================== */
+@media (max-width: 992px) {
+  .relatedproducts {
+    padding: 25px 40px;
+  }
+
+  .relatedproducts h1 {
+    font-size: 2.1rem;
+  }
+
+  .relatedproducts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .relatedproducts-grid .item img {
+    height: 77%;
+  }
+}
+
+/* =====================
+   SMALL TABLET
+===================== */
+@media (max-width: 768px) {
+  .relatedproducts {
+    padding: 20px 30px;
+  }
+
+  .relatedproducts h1 {
+    font-size: 1.8rem;
+  }
+
+  .relatedproducts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .relatedproducts-grid .item img {
+    height: 80%;
+  }
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 576px) {
+  .relatedproducts {
+    padding: 15px;
+  }
+
+  .relatedproducts h1 {
+    font-size: 1.6rem;
+  }
+
+  .relatedproducts-grid {
+    grid-template-columns: repeat(1, 1fr);
     
-    .ralatedproducts h1 {
-        font-size: 1.2rem;
-    }
-    
-    .relatedproducts-item {
-        gap: 10px;
-        margin-top: 15px;
-    }
-    
-    .relatedproducts-item > * {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+  }
+
+  .relatedproducts-grid .item {
+    margin-left: 40px;
+    padding: 12px;
+  }
+
+  .relatedproducts-grid .item img {
+    height: 80%;
+  }
+}
+
+/* =====================
+   SMALL MOBILE
+===================== */
+@media (max-width: 420px) {
+  .relatedproducts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .relatedproducts-grid .item img {
+    height: 80%;
+  }
+}
+
+/* =====================
+   VERY SMALL MOBILE
+===================== */
+@media (max-width: 350px) {
+  .relatedproducts h1 {
+    font-size: 1.4rem;
+  }
+
+  .relatedproducts-grid .item img {
+    height: 80%;
+  }
 }
